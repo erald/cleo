@@ -486,6 +486,57 @@ function member_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-member_profile-field_company_logo'
+  $field_instances['node-member_profile-field_company_logo'] = array(
+    'bundle' => 'member_profile',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 41,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_company_logo',
+    'label' => 'Bedrijfs Logo',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'company_logo',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'imce_filefield_on' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 19,
+    ),
+  );
+
   // Exported field_instance: 'node-member_profile-field_email'
   $field_instances['node-member_profile-field_email'] = array(
     'bundle' => 'member_profile',
@@ -1683,6 +1734,7 @@ function member_content_field_default_field_instances() {
   t('Adress');
   t('BIC');
   t('BTW Nummer');
+  t('Bedrijfs Logo');
   t('Bedrijfsnaam');
   t('Branche');
   t('Diploma\'s');

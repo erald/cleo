@@ -30,6 +30,7 @@ function member_content_field_group_info() {
       4 => 'field_comp_phone',
       5 => 'field_comp_mobile',
       6 => 'field_comp_fax',
+      7 => 'field_company_logo',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -133,6 +134,7 @@ function member_content_field_group_info() {
       6 => 'field_phone',
       7 => 'field_mobile',
       8 => 'field_fax',
+      9 => 'field_photo',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
