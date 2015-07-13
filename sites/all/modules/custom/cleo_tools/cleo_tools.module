@@ -1,0 +1,32 @@
+<?php
+
+/*****************
+ * misc. tools for CGD
+ ******************/
+function cleo_tools_init(){
+    drupal_add_js(drupal_get_path('module', 'cleo_tools') .'/js/cleo_tools.js');
+    global $user;
+    drupal_add_js(array('cleo_tools' => array('currentUser' => $user->uid)), 'setting');
+
+}
+/********************
+ * change node tabs.
+ ********************/
+ 
+
+/****************
+ * User registration CG pending
+ *****************/
+
+function cleo_tools_menu() {
+  	$items = array();
+ 
+
+
+  	return $items;
+  
+}
+
+/**********
+ *  goto workflow
+ **********/

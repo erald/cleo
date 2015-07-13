@@ -1,0 +1,36 @@
+From 32da52b48520c883964cfaa83943d31657eb6f9e Mon Sep 17 00:00:00 2001
+From: erald <erald@zephyre.be>
+Date: Wed, 25 Mar 2015 07:53:33 -0700
+Subject: [PATCH] PI-544 jumping accordion
+
+---
+ sites/all/modules/contrib/field_group/field_group.js | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+diff --git a/sites/all/modules/contrib/field_group/field_group.js b/sites/all/modules/contrib/field_group/field_group.js
+index c08c921..440be04 100755
+--- a/sites/all/modules/contrib/field_group/field_group.js
++++ b/sites/all/modules/contrib/field_group/field_group.js
+@@ -61,7 +61,18 @@ Drupal.FieldGroup.Effects.processAccordion = {
+             ui.options.animated = 'slide';
+           }
+         }
+-      });     
++      });
++
++      wrapper.accordion({
++        heightStyle: "content",
++        active: active_index,
++        collapsible: true,
++        activate: function( event, ui ) {
++                    if(!$.isEmptyObject(ui.newHeader.offset())) {
++                        $('html:not(:animated), body:not(:animated)').animate({ scrollTop: ui.newHeader.offset().top -150}, 'slow');
++                    }
++                }
++      });      
+ 
+       if (type == 'form') {
+ 
+-- 
+2.2.1
+
